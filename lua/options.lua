@@ -1,42 +1,47 @@
--- [[ Setting options ]]
--- See `:help vim.o`
--- NOTE: You can change these options as you wish!
+local opt = vim.opt
 
--- Set highlight on search
-vim.o.hlsearch = false
+-- [[ Behavior ]]
 
--- Make line numbers default
-vim.wo.number = true
+-- General
+opt.mouse = "a"
+opt.timeoutlen = 300
+opt.updatetime = 250
 
--- Enable mouse mode
-vim.o.mouse = 'a'
+opt.completeopt = 'menuone,noselect' -- maybe behavior
 
--- Sync clipboard between OS and Neovim.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
-vim.o.clipboard = 'unnamedplus'
+-- Undo File
 
--- Enable break indent
-vim.o.breakindent = true
+opt.undofile = true
+opt.undolevels = 8192
 
--- Save undo history
-vim.o.undofile = true
+-- Search
+opt.ignorecase = true
+opt.smartcase = true
+opt.hlsearch = false
+opt.incsearch = true
 
--- Case-insensitive searching UNLESS \C or capital in search
-vim.o.ignorecase = true
-vim.o.smartcase = true
+-- Indents
+opt.smartindent = true
+opt.autoindent = true
+opt.expandtab = true
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
 
--- Keep signcolumn on by default
-vim.wo.signcolumn = 'yes'
+-- Scrolloff
+opt.scrolloff = 6
+opt.sidescrolloff = 12
 
--- Decrease update time
-vim.o.updatetime = 250
-vim.o.timeoutlen = 300
+-- [[ Display ]]
 
--- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
+-- General
+opt.termguicolors = true
+opt.signcolumn = "yes"
+opt.conceallevel = 3
+opt.cursorline = true
+opt.list = true
+opt.wrap = false
 
--- NOTE: You should make sure your terminal supports this
-vim.o.termguicolors = true
-
--- vim: ts=2 sts=2 sw=2 et
+-- Line Numbers
+opt.number = true
+opt.relativenumber = true

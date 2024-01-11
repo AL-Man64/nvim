@@ -1,28 +1,23 @@
--- [[ Basic Keymaps ]]
+local set = vim.keymap.set
 
--- Keymaps for better default experience
--- See `:help vim.keymap.set()`
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+-- Get rid of that pesky help page
+set({ "i", "n", "v" }, "<F1>", "<esc>")
 
--- Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+-- Move Lines
+set("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move down" })
+set("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move up" })
+set("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
+set("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
 
--- Diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+-- Clear search with <esc>
+set("n", "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
 
--- [[ Highlight on yank ]]
--- See `:help vim.highlight.on_yank()`
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = '*',
-})
+-- Better indenting
+set("v", "<", "<gv")
+set("v", ">", ">gv")
 
--- vim: ts=2 sts=2 sw=2 et
+-- Diagnostic
+set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
+set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
+set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
+set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
