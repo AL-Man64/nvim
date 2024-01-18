@@ -1,11 +1,13 @@
 return {
-  "nvim-lualine/lualine.nvim",
-  opts = {
-    options = {
-      icons_enabled = false,
-      theme = "onedark",
-      component_separators = "|",
-      section_separators = "",
-    },
-  },
+	"nvim-lualine/lualine.nvim",
+
+    cond = not vim.g.vscode,
+
+    lazy = false,
+
+	opts = {
+		options = {
+			theme = "catppuccin",
+		},
+	},
 }

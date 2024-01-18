@@ -1,11 +1,9 @@
 return {
-    "lukas-reineke/indent-blankline.nvim",
+    "j-hui/fidget.nvim",
 
     cond = not vim.g.vscode,
 
     lazy = false,
-
-    main = "ibl",
 
     opts = {},
 }

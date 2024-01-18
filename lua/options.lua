@@ -1,16 +1,15 @@
 local opt = vim.opt
 
+
 -- [[ Behavior ]]
 
 -- General
 opt.mouse = "a"
-opt.timeoutlen = 300
 opt.updatetime = 250
-
-opt.completeopt = 'menuone,noselect' -- maybe behavior
+opt.timeoutlen = 300
+opt.completeopt = "menuone,noselect"
 
 -- Undo File
-
 opt.undofile = true
 opt.undolevels = 8192
 
@@ -32,6 +31,7 @@ opt.shiftwidth = 4
 opt.scrolloff = 6
 opt.sidescrolloff = 12
 
+
 -- [[ Display ]]
 
 -- General
@@ -41,6 +41,7 @@ opt.conceallevel = 3
 opt.cursorline = true
 opt.list = true
 opt.wrap = false
+opt.colorcolumn = "80"
 
 -- Line Numbers
 opt.number = true
