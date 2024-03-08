@@ -1,7 +1,7 @@
 return {
-    "telescope.nvim",
+  "telescope.nvim",
 
-    dependencies = {
-        "nvim-telescope/telescope-fzf-native.nvim",
-    },
+  dependencies = {
+    "nvim-telescope/telescope-fzf-native.nvim",
+  },
 }

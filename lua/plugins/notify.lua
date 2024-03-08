@@ -1,21 +1,21 @@
 return {
-    "rcarriga/nvim-notify",
+  "rcarriga/nvim-notify",
 
-    opts = {
-        render = "minimal",
+  opts = {
+    render = "minimal",
 
-        top_down = false,
+    top_down = false,
 
-        timeout = 200,
+    timeout = 200,
 
-        max_height = function()
-            return math.floor(vim.o.lines * 0.25)
-        end,
-        max_width = function()
-            return math.floor(vim.o.columns * 0.5)
-        end,
-        on_open = function(win)
-            vim.api.nvim_win_set_config(win, { zindex = 100 })
-        end,
-    },
+    max_height = function()
+      return math.floor(vim.o.lines * 0.25)
+    end,
+    max_width = function()
+      return math.floor(vim.o.columns * 0.5)
+    end,
+    on_open = function(win)
+      vim.api.nvim_win_set_config(win, { zindex = 100 })
+    end,
+  },
 }

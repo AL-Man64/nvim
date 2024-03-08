@@ -1,8 +1,8 @@
 return {
-    "L3MON4D3/LuaSnip",
+  "L3MON4D3/LuaSnip",
 
-    keys = {
-        { "<tab>", false },
-        { "<s-tab>", false },
-    },
+  keys = {
+    { "<tab>", false },
+    { "<s-tab>", false },
+  },
 }

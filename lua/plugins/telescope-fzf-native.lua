@@ -1,9 +1,9 @@
 return {
-    "nvim-telescope/telescope-fzf-native.nvim",
+  "nvim-telescope/telescope-fzf-native.nvim",
 
-    build = "make",
+  build = "make",
 
-    config = function()
-        require("telescope").load_extension("fzf")
-    end,
+  config = function()
+    require("telescope").load_extension("fzf")
+  end,
 }
