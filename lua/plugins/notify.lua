@@ -6,8 +6,6 @@ return {
 
     top_down = false,
 
-    timeout = 200,
-
     max_height = function()
       return math.floor(vim.o.lines * 0.25)
     end,
