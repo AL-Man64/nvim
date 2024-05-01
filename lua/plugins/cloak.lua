@@ -1,8 +1,6 @@
 return {
   "laytan/cloak.nvim",
 
-  lazy = false,
-
   opts = {
     enabled = true,
     cloak_character = "*",
