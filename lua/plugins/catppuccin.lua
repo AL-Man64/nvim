@@ -4,8 +4,8 @@ return {
   name = "catppuccin",
 
   opts = {
-    flavour = "latte",
-    transparent_background = false,
+    flavour = "mocha",
+    transparent_background = true,
     show_end_of_buffer = true,
 
     styles = {
