@@ -14,6 +14,7 @@ return {
       },
       eslint = {},
       emmet_language_server = {},
+      intelephense = {},
     },
 
     setup = {
