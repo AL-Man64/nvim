@@ -1,3 +1,5 @@
+vim.g.lazyvim_picker = "telescope"
+
 vim.opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
 
 vim.opt.colorcolumn = "80"
