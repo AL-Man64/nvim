@@ -1,4 +1,5 @@
 vim.g.lazyvim_picker = "telescope"
+vim.g.lazyvim_python_lsp = "basedpyright"
 
 vim.opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
 
