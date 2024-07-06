@@ -1,5 +1,15 @@
 return {
     {
+        "neovim/nvim-lspconfig",
+        opts = {
+            -- TODO: find better alternative
+            inlay_hints = {
+                enabled = false,
+            },
+        },
+    },
+
+    {
         "nvim-cmp",
         keys = {
             { "<Tab>", mode = { "i", "s" }, false },
