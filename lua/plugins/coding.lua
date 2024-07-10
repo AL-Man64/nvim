@@ -1,12 +1,8 @@
 return {
     {
-        "neovim/nvim-lspconfig",
-        opts = {
-            -- TODO: find better alternative
-            inlay_hints = {
-                enabled = false,
-            },
-        },
+        "chrisgrieser/nvim-lsp-endhints",
+        event = "LspAttach",
+        opts = {},
     },
 
     {
