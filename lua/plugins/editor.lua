@@ -8,6 +8,11 @@ return {
                 position = "right",
                 width = 28,
             },
+            filesystem = {
+                filtered_items = {
+                    visible = true,
+                },
+            },
         },
     },
 
